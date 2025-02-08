@@ -572,13 +572,13 @@ ul {
   padding-top: 60px;
 }
 .team .box .data img {
-  width: calc(100% - 60px);
+  width: calc(80% - 60px);
   transition: var(--main-transition);
   border-radius: 10px;
 }
-.team .box:hover img {
+/* .team .box:hover img {
   filter: grayscale(100%);
-}
+} */
 .team .box .data .social {
   width: 60px;
   display: flex;
@@ -617,8 +617,9 @@ ul {
   color: #777;
 }
 /* End Team */
+
 /* Start Services */
-.services {
+/* .services {
   padding-top: var(--main-padding-top);
   padding-bottom: var(--main-padding-bottom);
   position: relative;
@@ -636,6 +637,7 @@ ul {
   transition: var(--main-transition);
   position: relative;
 }
+
 .services .box::before {
   content: "";
   left: 50%;
@@ -675,7 +677,7 @@ ul {
   content: "0" counter(services);
   position: absolute;
   background-color: var(--main-color);
-  color: white;
+  color: var(--main-color);
   left: 0;
   top: 0;
   height: 100%;
@@ -699,7 +701,7 @@ ul {
 }
 .services .box .info a {
   color: var(--main-color);
-}
+} */
 /* End Services */
 
 /* Start Work Steps */
