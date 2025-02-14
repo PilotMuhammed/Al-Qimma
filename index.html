@@ -504,14 +504,15 @@
                 5672962692
                 <img  class="iconCopy" src="./imgs/copy.png" alt="">
               </p>
-              <p>
+              <!-- <p>
                 07702791812
                 <img  class="iconCopy" src="./imgs/copy.png" alt="">
-              </p>
+              </p> -->
             </div>
           </div>
         </div>
       </div>
+      <div id="customAlert" class="custom-alert">  تم نسخ رقم الحساب  </div>
     </div>
     <!-- End Work Steps -->
 
@@ -628,7 +629,33 @@
     </div>
     <!-- End Footer -->
 
-    <!-- <script src="js/main.js"></script> -->
+    <script>
+
+      const clickImg = document.querySelector('.iconCopy')
+      
+      clickImg.addEventListener('click', function(){
+            const textToCopy = "5672962692";
+            navigator.clipboard.writeText(textToCopy)
+                .then(() => {
+                    showCustomAlert("تم نسخ رقم الحساب  ");
+                })
+                .catch(() => {
+                    showCustomAlert("حدث خطأ أثناء نسخ النص!");
+                });
+        })
+        
+        function showCustomAlert(message) {
+            const alertElement = document.getElementById("customAlert");
+            alertElement.textContent = message; 
+            alertElement.style.display = "block"; 
+
+            setTimeout(() => {
+                alertElement.style.display = "none";
+            }, 3000);
+        }
+
+
+    </script>
 
   </body>
 </html>
