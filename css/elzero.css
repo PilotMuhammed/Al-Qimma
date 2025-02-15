@@ -17,6 +17,7 @@ html {
 }
 body {
   font-family: "Cairo", sans-serif;
+  padding-top: 72px;
 }
 a {
   text-decoration: none;
@@ -124,7 +125,12 @@ ul {
 /* Start Header */
 .header {
   background-color: white;
-  position: relative;
+  /* position: relative; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   -webkit-box-shadow: 0 0 10px #ddd;
   -moz-box-shadow: 0 0 10px #ddd;
   box-shadow: 0 0 10px #ddd;
