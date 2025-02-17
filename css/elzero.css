@@ -278,6 +278,13 @@ ul {
 /* Start Landing */
 .landing {
   position: relative;
+  /* background-image: url(../imgs/data-center.jpg); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  
 }
 .landing::before {
   content: "";
@@ -296,15 +303,44 @@ ul {
   display: flex;
   align-items: center;
   padding-bottom: 120px;
+
+  perspective: 1000px
 }
 .landing .text {
   flex: 1;
+  font-family: monospace;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  opacity: 0; 
+  transform: translateZ(-2000px);
+  animation: comeForward 1.5s ease-out forwards; 
+}
+@keyframes comeForward {
+    to {
+        opacity: 1; 
+        transform: translateZ(0); 
+    }
 }
 @media (max-width: 991px) {
   .landing .text {
     text-align: center;
   }
 }
+
+.landing .text #caret{
+  animation: blink-caret 0.75s step-end infinite;
+  border-right: 3px solid black; 
+  animation: blink-caret 0.75s step-end infinite;
+}
+@keyframes blink-caret {
+  /* from, to { opacity: 0; } 
+  50% { opacity: 1; }  */
+
+  from, to { border-color: transparent; } 
+  50% { border-color: black; } 
+}
+
 .landing .text h1 {
   font-size: 40px;
   margin: 0;
