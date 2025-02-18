@@ -343,7 +343,7 @@ ul {
 
 .landing .text h1 {
   font-size: 40px;
-  margin: 0;
+  /* margin: 0; */
   letter-spacing: -2px;
 }
 @media (max-width: 767px) {
