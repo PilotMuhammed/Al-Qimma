@@ -278,7 +278,7 @@ ul {
 /* Start Landing */
 .landing {
   position: relative;
-  /* background-image: url(../imgs/data-center.jpg); */
+  background-image: url(../imgs/back-img-landing.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -290,31 +290,34 @@ ul {
   content: "";
   position: absolute;
   left: 0;
-  top: -40px;
+  /* top: -40px; */
+  top: 0;
   width: 100%;
   height: 100%;
-  background-color: #ececec;
-  z-index: -1;
-  transform: skewY(-6deg);
-  transform-origin: top left;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+  /* transform: skewY(-6deg);
+  transform-origin: top left; */
 }
 .landing .container {
+  position: relative;
+  z-index: 2;
   min-height: calc(100vh - 72px);
   display: flex;
   align-items: center;
   padding-bottom: 120px;
-
   perspective: 1000px
 }
 .landing .text {
   flex: 1;
   font-family: monospace;
   display: inline-block;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   opacity: 0; 
   transform: translateZ(-2000px);
   animation: comeForward 1.5s ease-out forwards; 
+  color: black;
 }
 @keyframes comeForward {
     to {
@@ -342,13 +345,14 @@ ul {
 }
 
 .landing .text h1 {
-  font-size: 40px;
+  font-size: 50px;
+  font-weight: bold;
   /* margin: 0; */
   letter-spacing: -2px;
 }
 @media (max-width: 767px) {
   .landing .text h1 {
-    font-size: 28px;
+    font-size: 29px;
   }
 }
 .landing .text p {
@@ -370,7 +374,7 @@ ul {
 }
 .landing .image img {
   position: relative;
-  width: 350px;
+  width: 300px;
   animation: up-and-down 5s linear infinite;
 }
 @media (max-width: 991px) {
@@ -379,9 +383,9 @@ ul {
   }
 }
 .landing .go-down {
-  color: var(--main-color);
+  color: var(--main-color-alt);
   position: absolute;
-  bottom: 30px;
+  bottom: 140px;
   left: 50%;
   transform: translateX(-50%);
   transition: var(--main-transition);
