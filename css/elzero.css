@@ -318,6 +318,7 @@ ul {
   transform: translateZ(-2000px);
   animation: comeForward 1.5s ease-out forwards; 
   color: black;
+  position: relative;
 }
 @keyframes comeForward {
     to {
@@ -355,21 +356,53 @@ ul {
     font-size: 29px;
   }
 }
-.landing .text p {
-  font-size: 23px;
+.landing .text h2 {
+  font-size: 40px;
   line-height: 1.7;
   margin: 5px 0 0;
-  color: #666;
-  max-width: 500px;
+  color: var(--main-color);
+  max-width: 900px;
+  /* Animation*/
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  /* font-weight: bold; */
+  overflow: hidden;
+  /* background: linear-gradient(0deg, var(--main-color-alt), var(--main-color-alt), var(--main-color), var(--main-color)); */
+  background: linear-gradient(0deg, #EFB036, #EFB036, var(--main-color), var(--main-color));
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: wave-animation 2s infinite ease-in-out;
 }
+@keyframes wave-animation {
+  0%, 100% { background-position: 0% 100%; }
+  50% { background-position: 50% 0%; }
+}
+
+@keyframes wave-animation {
+  0% { background-position: 0% 100%; }
+  50% { background-position: 0% 0%; }
+  100% { background-position: 0% 100%; }
+}
+
+/* .text {
+  animation: vertical-wave 1s infinite alternate;
+} */
+
+
+/* End Animation */
+
 @media (max-width: 991px) {
-  .landing .text p {
+  .landing .text h2 {
     margin: 10px auto;
   }
 }
 @media (max-width: 767px) {
-  .landing .text p {
-    font-size: 18px;
+  .landing .text h2 {
+    font-size: 35px;
+    margin-top: 50px;
   }
 }
 .landing .image img {
@@ -636,27 +669,7 @@ ul {
 /* .team .box:hover img {
   filter: grayscale(100%);
 } */
-.team .box .data .social {
-  width: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-.team .box .data .social a {
-  width: 60px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.team .box .data .social a:hover i {
-  color: var(--main-color);
-}
-.team .box .data .social i {
-  color: #777;
-  transition: var(--main-transition);
-}
+
 .team .box .info {
   padding-right: 30px;
 }
@@ -672,6 +685,50 @@ ul {
 }
 .team .box:hover .info h3 {
   color: #777;
+}
+
+@media (max-width: 768px) {
+  .team .container {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px; 
+  }
+
+  .team .box {
+    background: #f9f9f9; 
+    border-radius: 10px; 
+    padding: 5px;
+    text-align: center; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+
+  .team .box .data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    padding-top: 0; 
+    padding-top: 5px;
+  }
+  .team .box .info {
+    padding-right: 5px;
+  }
+  .team .box .data img {
+    width: 100px; 
+    height: 100px;
+    border-radius: 80%; 
+    object-fit: cover; 
+  }
+  .team .box .info h3 {
+    font-size: 16px; 
+    margin-top: 10px;
+    color: var(--main-color); 
+  }
+
+  .team .box .info p {
+    font-size: 14px;
+    color: var(--main-color); 
+    margin-bottom: 6px;
+  }
 }
 /* End Team */
 
