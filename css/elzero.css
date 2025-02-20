@@ -386,11 +386,9 @@ ul {
   50% { background-position: 0% 0%; }
   100% { background-position: 0% 100%; }
 }
-
 /* .text {
   animation: vertical-wave 1s infinite alternate;
 } */
-
 
 /* End Animation */
 
@@ -467,6 +465,7 @@ ul {
 }
 .articles .box .content h3 {
   margin: 0;
+  color: var(--main-color);
 }
 @media (max-width: 767px) {
   .articles .box .content h3 {
@@ -723,11 +722,10 @@ ul {
     margin-top: 10px;
     color: var(--main-color); 
   }
-
   .team .box .info p {
     font-size: 14px;
     color: var(--main-color); 
-    margin-bottom: 6px;
+    margin-bottom: 10px;
   }
 }
 /* End Team */
